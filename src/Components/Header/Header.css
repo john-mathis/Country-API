@@ -1,0 +1,27 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    max-height: 5rem;
+}
+
+@media screen and (max-width:320px) {
+    .header-container {
+        padding: 1rem;
+    }
+}
+
+
+.header {
+    font-weight: bold;
+}
+
+.dark-mode {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.moon {
+    margin-right: .3rem;
+}

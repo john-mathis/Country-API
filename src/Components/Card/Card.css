@@ -1,0 +1,51 @@
+.card-container {
+    max-width: 16.5rem;
+    margin: 2rem auto;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--dark-mode-text);
+}
+
+.country-name {
+    margin-bottom: 1rem;
+}
+
+.detail-container {
+    padding: 1rem;
+}
+
+.flag {
+    max-width: 100%;
+    min-height: 10rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bold-detail {
+    font-weight: bold;
+    margin-right: .2rem;
+}
+
+.card-grid-container {
+    display: grid;
+}
+
+@media screen and (min-width:630px) {
+    .card-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media screen and (min-width:1024px) {
+    .card-grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media screen and (min-width:1440px) {
+    .card-grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
