@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mackmathis/Country-API/static/css/main.b5561a84.css",
+    "main.js": "/mackmathis/Country-API/static/js/main.eff9c86d.js",
+    "index.html": "/mackmathis/Country-API/index.html",
+    "main.b5561a84.css.map": "/mackmathis/Country-API/static/css/main.b5561a84.css.map",
+    "main.eff9c86d.js.map": "/mackmathis/Country-API/static/js/main.eff9c86d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b5561a84.css",
+    "static/js/main.eff9c86d.js"
+  ]
+}
