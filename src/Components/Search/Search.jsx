@@ -3,12 +3,7 @@ import "..//Search/Search.css";
 import { FaSearch } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 
-const Search = ({
-  countryData,
-  setCountryData,
-  getCountryData,
-  searchCountryData,
-}) => {
+const Search = ({ searchCountryData, filterByRegion }) => {
   return (
     <>
       <section className="search-container">
@@ -25,29 +20,30 @@ const Search = ({
             }}
           />
         </div>
-        <div className="filter-container">
-          <button className="filter-button">
-            Filter by Region
-            <IoIosArrowDown />
-          </button>
-          <div className="filter-options">
-            <a className="filter-links" href="/">
-              Africa
-            </a>
-            <a className="filter-links" href="/">
-              America
-            </a>
-            <a className="filter-links" href="/">
-              Asia
-            </a>
-            <a className="filter-links" href="/">
-              Europe
-            </a>
-            <a className="filter-links" href="/">
-              Oceania
-            </a>
-          </div>
-        </div>
+        <select
+          className="filter-container"
+          onChange={(event) => {
+            filterByRegion(event.target.value);
+          }}
+        >
+          <option className="filter-links">Filter by Region</option>
+
+          <option className="filter-links" value="Africa">
+            Africa
+          </option>
+          <option className="filter-links" value="America">
+            America
+          </option>
+          <option className="filter-links" value="Asia">
+            Asia
+          </option>
+          <option className="filter-links" value="Europe">
+            Europe
+          </option>
+          <option className="filter-links" value="Oceania">
+            Oceania
+          </option>
+        </select>
       </section>
     </>
   );

@@ -35,9 +35,15 @@
     border: none;
 }
 
+@media screen and (max-width:629px) {
+    .filter-container {
+        margin: 2rem 0 1rem -8.5rem;
+    }
+}
+
 .filter-container {
-    max-width: 12.5rem;
-    margin: 2rem 0 1rem -8.5rem;
+    min-width: 12.5rem;
+    min-height: 3rem;
     display: flex;
     flex-direction: column;
 }
@@ -48,35 +54,14 @@
     }
 }
 
-.filter-options {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Filter Button */
-
-.filter-button {
-    min-width: 12.5rem;
-    min-height: 3rem;
-    border: none;
-    text-align: left;
-    padding: 0rem .7rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-.filter-options {
-    margin-top: .6rem;
-    min-width: 12.5rem;
-    min-height: 9rem;
-    display: flex;
-    justify-content: space-between;
-}
-
 .filter-links {
     text-decoration: none;
     color: var(--light-mode-text);
     padding: 0rem 1rem;
+    margin: 1rem auto;
+    min-width: 12.5rem;
+    min-height: 5rem;
+    border: none;
+    text-align: center;
+    padding: 0rem .7rem;
 }

@@ -5,13 +5,16 @@ import "../src/App.css";
 import Header from "./Components/Header/Header";
 import Search from "./Components/Search/Search";
 import Card from "./Components/Card/Card";
+import Loading from "./Components/Loading/Loading";
 
 const App = () => {
   const [countryData, setCountryData] = useState([]);
+  const [doneLoading, setDoneLoading] = useState(null);
 
   const getCountryData = async () => {
     const response = await axios.get("https://restcountries.com/v3.1/all");
     setCountryData(response.data);
+    setDoneLoading(response.data);
   };
 
   const searchCountryData = async (countryName) => {
@@ -23,6 +26,15 @@ const App = () => {
     setCountryData(response.data);
   };
 
+  const filterByRegion = async (region) => {
+    if (region === "") return;
+    const response = await axios.get(
+      `https://restcountries.com/v3.1/region/${region}`
+    );
+
+    setCountryData(response.data);
+  };
+
   useEffect(() => {
     getCountryData();
   }, []);
@@ -30,8 +42,11 @@ const App = () => {
   return (
     <>
       <Header />
-      <Search searchCountryData={searchCountryData} />
-      <Card countryData={countryData} />
+      <Search
+        searchCountryData={searchCountryData}
+        filterByRegion={filterByRegion}
+      />
+      {doneLoading ? <Card countryData={countryData} /> : <Loading />}
     </>
   );
 };

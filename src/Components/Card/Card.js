@@ -1,7 +1,7 @@
 import React from "react";
 import "..//Card/Card.css";
 
-const Card = ({ countryData, setCountryData, getCountryData }) => {
+const Card = ({ countryData }) => {
   const flagData = countryData.map((info) => {
     const { latlng, flags, name, population, region, capital } = info;
     return (
