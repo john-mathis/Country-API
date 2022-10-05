@@ -26,7 +26,9 @@ const Search = ({ searchCountryData, filterByRegion }) => {
             filterByRegion(event.target.value);
           }}
         >
-          <option className="filter-links">Filter by Region</option>
+          <option className="filter-links" value="">
+            Filter by Region
+          </option>
 
           <option className="filter-links" value="Africa">
             Africa

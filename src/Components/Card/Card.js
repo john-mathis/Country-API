@@ -4,9 +4,14 @@ import "..//Card/Card.css";
 const Card = ({ countryData }) => {
   const flagData = countryData.map((info) => {
     const { latlng, flags, name, population, region, capital } = info;
+
+    const clickedCountry = (event) => {
+      console.log(event);
+    };
+
     return (
       <React.Fragment key={latlng}>
-        <div className="card-container">
+        <div className="card-container" onClick={clickedCountry}>
           <div className="flag-container">
             <img className="flag" src={flags.png} alt="flag of country" />
           </div>

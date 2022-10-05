@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link, Routes, Route } from "react-router-dom";
 import axios from "axios";
 import "../src/App.css";
 
@@ -6,6 +7,7 @@ import Header from "./Components/Header/Header";
 import Search from "./Components/Search/Search";
 import Card from "./Components/Card/Card";
 import Loading from "./Components/Loading/Loading";
+import InnerCardPage from "./Components/InnerCardPage/InnerCardPage";
 
 const App = () => {
   const [countryData, setCountryData] = useState([]);
@@ -42,6 +44,7 @@ const App = () => {
   return (
     <>
       <Header />
+      <InnerCardPage countryData={countryData} />
       <Search
         searchCountryData={searchCountryData}
         filterByRegion={filterByRegion}
