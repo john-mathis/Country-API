@@ -12,16 +12,29 @@
 }
 
 
+
 .header {
     font-weight: bold;
 }
 
-.dark-mode {
+#dark .header {
+    color: var(--dark-mode-text);
+}
+
+.dark-mode-toggle {
     cursor: pointer;
     display: flex;
     align-items: center;
 }
 
+#dark .dark-mode-toggle {
+    color: var(--dark-mode-text);
+}
+
 .moon {
     margin-right: .3rem;
+}
+
+.hide {
+    display: none
 }

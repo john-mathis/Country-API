@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
 import "..//Card/Card.css";
+import { Link } from "react-router-dom";
 
-const Card = ({ countryData }) => {
+const Card = ({ countryData, setCountryData }) => {
+  const getCountryData = async () => {
+    const response = await axios.get("https://restcountries.com/v3.1/all");
+    setCountryData(response.data);
+  };
+
+  useEffect(() => {
+    getCountryData();
+  });
+
   const flagData = countryData.map((info) => {
     const { latlng, flags, name, population, region, capital } = info;
 
-    const clickedCountry = (event) => {
-      console.log(event);
-    };
-
+    console.log(name.common);
     return (
       <React.Fragment key={latlng}>
-        <div className="card-container" onClick={clickedCountry}>
+        <div className="card-container">
           <div className="flag-container">
             <img className="flag" src={flags.png} alt="flag of country" />
           </div>
@@ -29,6 +37,8 @@ const Card = ({ countryData }) => {
               <span className="bold-detail">Capital:</span> {capital}
             </p>
           </div>
+
+          <Link to={`${name}`}>Learn More</Link>
         </div>
       </React.Fragment>
     );
