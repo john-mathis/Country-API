@@ -38,7 +38,7 @@ const Card = ({ countryData, setCountryData }) => {
             </p>
           </div>
 
-          <Link to={`${name}`}>Learn More</Link>
+          <Link to={`/Country-API/${name}`}>Learn More</Link>
         </div>
       </React.Fragment>
     );

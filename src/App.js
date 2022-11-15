@@ -49,7 +49,7 @@ const App = () => {
         <Routes>
           <Route
             exact
-            path="/"
+            path="/Country-API/"
             element={
               <Card
                 countryData={countryData}
@@ -58,7 +58,7 @@ const App = () => {
               />
             }
           ></Route>
-          <Route path="/:name" element={<InnerCardPage />}></Route>
+          <Route path="/Country-API/:name" element={<InnerCardPage />}></Route>
         </Routes>
       </main>
     </ThemeContext.Provider>

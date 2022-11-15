@@ -36,7 +36,7 @@ const InnerCardPage = (countryData) => {
   return (
     <React.Fragment>
       <h1>Country Data</h1>
-      <Link to="/">
+      <Link to="/Country-API/">
         <button>Back Home</button>
       </Link>
       {/* <div className="inner-card-container">
